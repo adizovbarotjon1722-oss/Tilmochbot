@@ -1,0 +1,12 @@
+[Unit]
+Description=Tilmoch Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/tilmoch_bot
+ExecStart=/opt/tilmoch_bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

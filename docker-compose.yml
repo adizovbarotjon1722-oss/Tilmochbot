@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: always
+    volumes:
+      - ./data:/app/data   # baza va kunlik zaxira nusxalar shu yerda saqlanadi
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
